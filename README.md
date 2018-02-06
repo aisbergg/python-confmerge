@@ -1,6 +1,6 @@
 # ConfMerge - Python configuration file merge utility
 
-*ConfMerge* lets you merge multiple configuration files into one. Currently supported configuration formats are INI, YAML and JSON.
+*ConfMerge* lets you merge multiple configuration files into one. Currently supported file formats are INI, YAML and JSON.
 
 **Table of contents:**
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
@@ -54,14 +54,14 @@ Merge multiple INI files and write result into `res.ini`
 confmerge -f 1.ini 2.ini 3.ini res.ini
 ```
 
-Merge two YAML files and print result on stdout:
-```
-confmerge -d 1.yml 2.yml -
-```
-
 Merge different types of configuration files:
 ```
 confmerge -f 1.yml 2.json 3.ini res.yml
+```
+
+Perform a dry run (don't write output file but print result on stdout):
+```
+confmerge -d 1.yml 2.yml not-touched.yml
 ```
 
 ## License
