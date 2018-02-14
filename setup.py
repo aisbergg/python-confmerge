@@ -39,7 +39,7 @@ setup(
         'License :: OSI Approved :: LGPL License',
         'Operating System :: POSIX',
         'Programming Language :: Python :: 3 :: Only',
-        'Topic :: System Administration :: Configuration Management',
-        'Topic :: System Administration :: Provisioning',
+        'Topic :: System :: Systems Administration',
+        'Topic :: Utilities',
     ],
 )

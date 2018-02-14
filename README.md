@@ -1,4 +1,4 @@
-# ConfMerge - Python configuration file merge utility
+# ConfMerge - Python3 configuration file merge utility
 
 *ConfMerge* lets you merge multiple configuration files into one. Currently supported file formats are INI, YAML and JSON.
 
@@ -66,4 +66,4 @@ confmerge -d 1.yml 2.yml not-touched.yml
 
 ## License
 
-MyDuRe is released under the LGPL v3 License. See LICENSE for more information.
+ConfMerge is released under the LGPL v3 License. See LICENSE for more information.
