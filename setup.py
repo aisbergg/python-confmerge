@@ -16,7 +16,7 @@ setup(
     license='LGPL',
     description='Configuration file merge utility',
     long_description=long_description,
-    keywords=['config', 'ini', 'yamel', 'json', 'command-line', 'CLI'],
+    keywords=['config', 'ini', 'yaml', 'json', 'command-line', 'CLI'],
     package_dir={ '': 'src' },
     packages=find_packages('src'),
     scripts=[],
