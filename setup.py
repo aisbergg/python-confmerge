@@ -26,7 +26,7 @@ setup(
         ]
     },
     install_requires=[
-        'pyyaml >= 3.10',
+        'pyyaml',
     ],
     include_package_data=True,
     zip_safe=True,
