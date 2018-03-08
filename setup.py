@@ -9,7 +9,7 @@ except(IOError, ImportError):
 
 setup(
     name='ConfMerge',
-    version='0.1.0',
+    version='0.1.1',
     author='Andre Lehmann',
     author_email='aisberg@posteo.de',
     url='https://github.com/Aisbergg/python-confmerge',

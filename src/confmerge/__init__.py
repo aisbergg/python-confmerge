@@ -2,7 +2,7 @@
 
 __author__ = "Andre Lehmann"
 __email__ = "aisberg@posteo.de"
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 from confmerge.cli import cli
 
