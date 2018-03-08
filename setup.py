@@ -19,7 +19,6 @@ setup(
     keywords=['config', 'ini', 'yaml', 'json', 'command-line', 'CLI'],
     package_dir={ '': 'src' },
     packages=find_packages('src'),
-    scripts=[],
     entry_points={
         'console_scripts': [
             'confmerge = confmerge:cli',
