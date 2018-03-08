@@ -288,18 +288,20 @@ class ConfMerge(object):
                 d[key] = self._simple_dict(d[key])
         return d
 
+
 def cli():
     """ CLI entry point """    
     # parsing arguments
-    parser = argparse.ArgumentParser(description="Merge multiple configuration files into one.")
-    parser.add_argument('-d', '--dry-run', dest='dry_run', action='store_true', default=False, help="Print the resulting merged content but don't write it into the destination file.")
-    parser.add_argument('-f', '--force', dest='force',  action='store_true', default=False, help="Force overwriting of an existing file.")
-    parser.add_argument('-m', '--mode', dest='mode', help="File mode for newly created configuration file.")
-    parser.add_argument('-t', '--type', dest='file_type', help="Type of file can be one of 'ini', 'json' or 'yaml'. If not specified the type will be guessed from the file extension.")
-    parser.add_argument('--debug', dest='debug', action='store_true', default=False, help="Print debug trace on error.")
-    parser.add_argument('--version', action='version', version='ConfMerge {0}'.format(__version__), help="Prints the program version and quits.")
-    parser.add_argument('src', nargs='+', help="The source files.")
-    parser.add_argument('dest', nargs=1, help="The destination file.")
+    parser = argparse.ArgumentParser(description="Merge multiple configuration files into one file", add_help=False)
+    parser.add_argument('-d', '--dry-run', dest='dry_run', action='store_true', default=False, help="Print the merged content on stdout instead of writing it to the destination file")
+    parser.add_argument('-f', '--force', dest='force',  action='store_true', default=False, help="Force overwriting of any existing destination file")
+    parser.add_argument("-h", "--help", action="help", help="Show this help message and exit")
+    parser.add_argument('-m', '--mode', dest='mode', help="File mode for newly created files")
+    parser.add_argument('-t', '--type', dest='file_type', help="Type of file can be one of 'ini', 'json' or 'yaml'. If not specified the type will be guessed from the file extension")
+    parser.add_argument('--debug', dest='debug', action='store_true', default=False, help="Print debug trace on error")
+    parser.add_argument('--version', action='version', version='ConfMerge {0}'.format(__version__), help="Print the program version and exit")
+    parser.add_argument('src', nargs='+', help="The source files")
+    parser.add_argument('dest', nargs=1, help="The destination file")
     args = parser.parse_args(sys.argv[1:])
 
     sources = [os.path.abspath(p) for p in args.src]
@@ -315,4 +317,3 @@ def cli():
         else:
             print(str(e))
         exit(1)
-    
