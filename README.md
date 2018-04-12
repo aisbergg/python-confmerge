@@ -18,7 +18,7 @@
 
 To install *ConfMerge* directly from Github:
 ```
-pip install git+https://github.com/Aisbergg/python-confmerge@v0.1.1
+pip install git+https://github.com/Aisbergg/python-confmerge@v0.2.0
 ```
 
 ## Usage
@@ -66,4 +66,4 @@ confmerge --dry-run 1.yml 2.yml not-touched.yml
 
 ## License
 
-ConfMerge is released under the LGPL v3 License. See [LICENSE](LICENSE) for more information.
+ConfMerge is released under the LGPL v3 License. See [LICENSE.txt](LICENSE.txt) for more information.
