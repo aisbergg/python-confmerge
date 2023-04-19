@@ -167,7 +167,7 @@ class YamlFile(ConfigFile):
         with open(self.path, 'r') as f:
             file_content = f.read()
         try:
-            return yaml.load(file_content) or dict()
+            return yaml.safe_load(file_content) or dict()
         except Exception as e:
             raise yaml.parser.ParserError(
                 "Failed to parse YAML file: {0}\n\n{1}".format(self.path, str(e)))
